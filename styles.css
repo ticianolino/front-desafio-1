@@ -38,12 +38,12 @@ a {
 }
 main {
     display: grid;
-    grid-template-columns: 5fr 3fr;
+    grid-template-columns: 3fr 1fr;
     background-color: #E5E5E5;
     padding: 55px 140px;
     column-gap: 50px;
 }
-.conteudo{
+.conteudo {
     display: grid;
     grid-auto-rows: min-content;
     row-gap: 40px;
@@ -56,7 +56,7 @@ main {
     font-weight: 700;
     margin: 24px 24px 8px 24px;
 }
-.card h2 {
+.card h6 {
     font-size: 12px;
     font-weight: 400;
     color: #929292;
@@ -71,20 +71,58 @@ main {
 .card button {
     all: unset;
     display: block;
-    width: 20%;
     text-align: center;
     border: 1px solid #FE0078;
     border-radius: 20px;
-    padding: 1em;
+    padding: 1em 2em;
     margin: 24px 24px 24px auto;
 }
-.card button, .card p, .links a, .links a:visited {
+.card button, .card p, .links a, .links a:visited, .anuncio, .tags {
     color: #545454;
 }
-.menu{
+.card button:hover {
+    background-color: #FE0078;
+    color: #FFFFFF;
+}
+.menu {
+    display: grid;
+    grid-auto-rows: min-content;
+    row-gap: 25px;
     background-color: #FFFFFF;
-    width: 150px;
-    height: 400px;
+    padding: 20px 20px 40px 20px;
+    height: auto;
+}
+.menu * {
+    margin: 0;
+}
+.menu h2 {
+    display: grid;
+    align-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 10px;
+    border-left: 2px solid #FE0078;
+    height: 40px;
+}
+.tags {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 2px dashed #EEEEEE;
+}
+.tags:hover {
+    color: #FE0078;
+    border-bottom: 2px dashed #FE0078;
+    cursor: pointer;
+}
+.anuncio {
+    display: grid;
+    place-content: center;
+    font-size: 36px;
+    font-weight: 400;
+    background-color: #EEEEEE;
+    width: 340px;
+    height: 240px;
 }
 footer {
     display: grid;
