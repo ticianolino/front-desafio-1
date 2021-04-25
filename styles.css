@@ -45,8 +45,9 @@ main {
     grid-template-columns: 3fr 1fr;
     align-items: flex-start;
     background-color: #E5E5E5;
-    padding: 55px 10vw;
+    padding: 55px 10vw 85px 10vw;
     column-gap: 50px;
+    row-gap: 25px;
 }
 .conteudo {
     display: grid;
@@ -57,6 +58,7 @@ main {
     background-color: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
+    padding-bottom: 15px;
 }
 .card h1 {
     font-size: 24px;
@@ -75,6 +77,13 @@ main {
 .card p {
     margin: 24px;
 }
+.card ul {
+    margin: 24px 45px;
+    list-style-position: inside;
+}
+.card li>ul {
+    margin: 0 45px;
+}
 .card button {
     all: unset;
     display: block;
@@ -84,12 +93,55 @@ main {
     padding: 1em 2em;
     margin: 24px 24px 24px auto;
 }
-.card button, .card p, .links a, .links a:visited, .anuncio, .tags, #pesquisa {
+.card button, .card p, .card li, .links a, .links a:visited, .anuncio, .tags, #pesquisa {
     color: #545454;
 }
 .card button:hover {
     background-color: #FE0078;
     color: #FFFFFF;
+}
+.comentarios h1 {
+    font-size: 24px;
+    margin: 24px 0;
+}
+.formularios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 200px;
+    gap: 24px;
+}
+#pesquisa, #txtNome, #txtEmail, #txtAssunto, #txtComentario {
+    all: unset;
+    background-color: #FFFFFF;
+}
+.nome, .email, .assunto, .comentbox {
+    display: grid;
+    align-content: space-between;
+}
+.comentbox {
+    grid-column-end: span 2;
+}
+#txtNome, #txtEmail, #txtAssunto {
+    height: 40px;
+}
+#txtComentario {
+    border: 0;
+    width: 100%;
+    resize: none;
+    height: 170px;
+}
+.botao-form button {
+    all: unset;
+    background-color: #FE0078;
+    color: #FFFFFF;
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    padding: 1em 2em;
+    margin: 0 0 0 auto;
+}
+.botao-form button:hover {
+    cursor: pointer;
 }
 .menu {
     display: grid;
@@ -101,14 +153,13 @@ main {
     border-radius: 4px;
 }
 #pesquisa {
-    all: unset;
     height: 50px;
     width: 93%;
     padding-left: 20px;
     border: 1px solid #EEEEEE;
     border-radius: 10px;
 }
-#pesquisa:focus{
+#pesquisa:focus, #txtNome:focus, #txtEmail:focus, #txtAssunto:focus, #txtComentario:focus{
     border: 1px solid #FE0078;
 }
 .menu h2 {
