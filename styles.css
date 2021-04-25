@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    min-height: 100vh;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+header {
+    display: grid;
+    background-color: #FFFFFF;
+    padding: 0 140px;
+    align-content: center;
+}
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: #545454;
+    align-content: center;
+    column-gap: 2em;
+}
+.links span {
+    display: grid;
+    justify-content: left;
+    align-content: center;
+}
+a {
+    text-decoration: none;
+}
+main {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    background-color: #E5E5E5;
+    padding: 55px 140px;
+    column-gap: 50px;
+}
+.conteudo{
+    display: grid;
+    grid-auto-rows: min-content;
+    row-gap: 40px;
+}
+.card {
+    background-color: #FFFFFF;
+}
+.card h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 24px 24px 8px 24px;
+}
+.card h2 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #929292;
+    margin: 8px 24px 14px 24px;
+}
+.card img {
+    width: 100%;
+}
+.card p {
+    margin: 24px;
+}
+.card button {
+    all: unset;
+    display: block;
+    width: 20%;
+    text-align: center;
+    border: 1px solid #FE0078;
+    border-radius: 20px;
+    padding: 1em;
+    margin: 24px 24px 24px auto;
+}
+.card button, .card p, .links a, .links a:visited {
+    color: #545454;
+}
+.menu{
+    background-color: #FFFFFF;
+    width: 150px;
+    height: 400px;
+}
+footer {
+    display: grid;
+    background-color: #222222;
+    color: #FFFFFF;
+    place-content: center;
+}
