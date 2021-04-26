@@ -3,11 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: "Open sans";
+}
 body {
     display: grid;
     grid-template-rows: 70px 1fr 70px;
     min-height: 100vh;
-    font-family: sans-serif;
+    font-family: "Open sans", sans-serif;
     font-weight: 400;
     font-size: 14px;
 }
@@ -54,34 +57,38 @@ main {
     grid-auto-rows: min-content;
     row-gap: 40px;
 }
-.card {
+.card, .card-post, .contato {
     background-color: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
     padding-bottom: 15px;
 }
-.card h1 {
+h1 {
     font-size: 24px;
     font-weight: 700;
+}
+.card h1, .card-post h1 {
     margin: 24px 24px 8px 24px;
 }
-.card h6 {
+h6 {
     font-size: 12px;
     font-weight: 400;
     color: #929292;
+}
+.card h6, .card-post h6 {
     margin: 8px 24px 14px 24px;
 }
-.card img {
+.card img, .card-post img {
     width: 100%;
 }
-.card p {
+.card p, .card-post p {
     margin: 24px;
 }
-.card ul {
+.card-post ul {
     margin: 24px 45px;
     list-style-position: inside;
 }
-.card li>ul {
+.card-post li>ul {
     margin: 0 45px;
 }
 .card button {
@@ -101,14 +108,13 @@ main {
     color: #FFFFFF;
 }
 .comentarios h1 {
-    font-size: 24px;
     margin: 24px 0;
 }
 .formularios {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 70px 200px;
-    gap: 24px;
+    gap: 30px;
 }
 #pesquisa, #txtNome, #txtEmail, #txtAssunto, #txtComentario {
     all: unset;
@@ -118,7 +124,7 @@ main {
     display: grid;
     align-content: space-between;
 }
-.comentbox {
+.comentbox, .assunto {
     grid-column-end: span 2;
 }
 #txtNome, #txtEmail, #txtAssunto {
@@ -142,6 +148,23 @@ main {
 }
 .botao-form button:hover {
     cursor: pointer;
+}
+.contato {
+    display: grid;
+    grid-template-rows: repeat (5, min-content);
+    row-gap: 30px;
+    padding: 25px;
+}
+h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.contato .formularios {
+    grid-template-rows: 70px 70px 200px;
+}
+.contato #txtNome, .contato #txtEmail, .contato #txtAssunto, .contato #txtComentario {
+    border: 1px solid #EEEEEE;
 }
 .menu {
     display: grid;
@@ -190,6 +213,9 @@ main {
     background-color: #EEEEEE;
     width: 25vw;
     height: 18vw;
+}
+.anuncio:hover {
+    cursor: pointer;
 }
 footer {
     display: grid;
